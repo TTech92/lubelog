@@ -34,8 +34,8 @@
                     <input type="text" id="inputMake" class="form-control" placeholder="@translator.Translate(userLanguage, "Make")" value="@Model.Make">
                     <label for="inputModel">@translator.Translate(userLanguage, "Model")</label>
                     <input type="text" id="inputModel" class="form-control" placeholder="@translator.Translate(userLanguage, "Model")" value="@Model.Model">
-                    <label for="inputLicensePlate">@translator.Translate(userLanguage, "License Plate")</label>
-                    <input type="text" id="inputLicensePlate" class="form-control" placeholder="@translator.Translate(userLanguage, "License Plate")" value="@Model.LicensePlate">
+                    <label for="inputVIN">@translator.Translate(userLanguage, "VIN")</label>
+                    <input type="text" id="inputVIN" class="form-control" placeholder="@translator.Translate(userLanguage, "VIN")" value="@Model.VIN">
                     @foreach (ExtraField field in Model.ExtraFields)
                     {
                         var elementId = Guid.NewGuid();

@@ -67,7 +67,7 @@ namespace CarCareTracker.Controllers
                     Year = x.Year,
                     Make = x.Make,
                     Model = x.Model,
-                    LicensePlate = x.LicensePlate,
+                    VIN = x.VIN,
                     SoldDate = x.SoldDate,
                     IsElectric = x.IsElectric,
                     IsDiesel = x.IsDiesel,
@@ -121,7 +121,7 @@ namespace CarCareTracker.Controllers
                 if (vehicleReminders.Any())
                 {
                     var reminderUrgency = _reminderHelper.GetReminderRecordViewModels(vehicleReminders, 0, DateTime.Now);
-                    reminderUrgency = reminderUrgency.Select(x => new ReminderRecordViewModel { Id = x.Id, Date = x.Date, Urgency = x.Urgency, Description = $"{vehicle.Year} {vehicle.Make} {vehicle.Model} #{vehicle.LicensePlate} - {x.Description}" }).ToList();
+                    reminderUrgency = reminderUrgency.Select(x => new ReminderRecordViewModel { Id = x.Id, Date = x.Date, Urgency = x.Urgency, Description = $"{vehicle.Year} {vehicle.Make} {vehicle.Model} #{vehicle.VIN} - {x.Description}" }).ToList();
                     reminders.AddRange(reminderUrgency);
                 }
             }
